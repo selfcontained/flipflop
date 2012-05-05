@@ -1,3 +1,42 @@
 #!/usr/bin/env node
 
-require('../lib/cli.js');
+var path = require('path'),
+	flatiron = require('flatiron'),
+	c = require('colors'),
+	app = flatiron.app;
+
+app.use(flatiron.plugins.cli, {
+	dir: path.join(__dirname, '../', 'lib', 'commands'),
+	usage: [
+		"  __  _  _          __  _               ".green,
+		" / _|| |(_)        / _|| |              ".green,
+		"| |_ | | _  _ __  | |_ | |  ___   _ __  ".green,
+		"|  _|| || || '_ \\ |  _|| | / _ \\ | '_ \\ ".green,
+		"| |  | || || |_) || |  | || (_) || |_) |".green,
+		"|_|  |_||_|| .__/ |_|  |_| \\___/ | .__/ ".green,
+		"           | |                   | |    ".green,
+		"           |_|                   |_|    ".green,
+		'ezmode blogging, like wearing sandals'.grey,
+		'',
+		'',
+		'USAGE'.underline,
+		'',
+		'	flipflop'.yellow+' create',
+		'	interactive prompt for creating a flipflop blog '.grey,
+		'',
+		'	flipflop'.yellow+' start'+' <port>'.grey,
+		'	starts a node http server on the specified port (default=8080)'.grey,
+		'',
+		'	flipflop'.yellow+' generate',
+		'	generates a static version of the blog under the `public` directory'.grey,
+		'',
+		'	flipflop'.yellow+' version',
+		'	outputs installed version of flipflop'.grey,
+		'',
+		'	flipflop'.yellow+' sandal',
+		'	a sandal'.grey,
+		''
+	]
+});
+
+app.start();
