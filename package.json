@@ -8,7 +8,7 @@
 		"markdown",
 		"static"
 	],
-	"main": "./lib/blog.js",
+	"main": "./lib/flipflop.js",
 	"bin" : {
 		"flipflop" : "./bin/flipflop"
 	},
