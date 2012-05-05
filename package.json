@@ -3,7 +3,7 @@
 	"description": "ezmode geek blogging, like wearing sandals",
 	"version": "0.0.1",
 	"preferGlobal": true,
-	"author": "Brad Harris <bmharris@gmail.com>",
+	"author": "Brad Harris <bmharris@gmail.com> (http://selfcontained.us)",
 	"keywords": [
 		"blog",
 		"markdown",
@@ -18,7 +18,11 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/bmharris/flipflop.git"
+		"url": "http://github.com/bmharris/flipflop.git"
+	},
+	"directories" : {
+		"lib" : "./lib",
+		"bin" : "./bin"
 	},
 	"dependencies" : {
 		"colors" : "0.6.0-1",
