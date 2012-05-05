@@ -35,6 +35,7 @@ Make sure you're inside your blog's directory.
 ```
 > flipflop start <port>
 ```
+check your browser @ `http://localhost:8080`
 +	port is optional, defaults to 8080
 
 ##Static sites are hawt
