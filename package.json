@@ -2,6 +2,7 @@
 	"name": "flipflop",
 	"description": "ezmode blogging, like wearing sandals",
 	"version": "0.0.1",
+	"preferGlobal": true,
 	"author": "Brad Harris <bmharris@gmail.com>",
 	"keywords": [
 		"blog",
@@ -15,8 +16,9 @@
 	"scripts" : {
 		"test" : "vows"
 	},
-	"engines": {
-		"node": ">= 0.4.1"
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/bmharris/flipflop.git"
 	},
 	"dependencies" : {
 		"colors" : "0.6.0-1",
@@ -33,5 +35,8 @@
 		"vows" : "0.6.2",
 		"request" : "2.9.202"
 	},
-	"license": "MIT"
+	"license": "MIT",
+	"engine": {
+		"node": ">= 0.4.1"
+	}
 }
