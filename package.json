@@ -1,7 +1,7 @@
 {
 	"name": "flipflop",
 	"description": "ezmode geek blogging, like wearing sandals",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"preferGlobal": true,
 	"author": "Brad Harris <bmharris@gmail.com> (http://selfcontained.us)",
 	"keywords": [
@@ -43,6 +43,6 @@
 	},
 	"license": "MIT",
 	"engine": {
-		"node": ">= 0.4.1"
+		"node": "0.6.x"
 	}
 }
