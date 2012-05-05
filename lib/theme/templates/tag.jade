@@ -1,0 +1,21 @@
+extends layout
+
+block sidebar
+
+	include sidebar
+
+block content
+
+	h2 Articles tagged with <i>"#{tag}"</i>
+
+	each article in articles
+
+		article
+			h2
+				a(href=article.path) #{article.title}
+
+			include article-meta
+
+			div.content
+
+				!{article.content}

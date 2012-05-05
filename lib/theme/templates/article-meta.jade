@@ -1,0 +1,13 @@
+div.meta
+
+	ul.tags
+		each tag inarticle.tags
+			li
+				a(href="/tag/"+tag+"/") #{tag}
+
+	if article.author.gravatar
+		img(src="http://www.gravatar.com/avatar/"+article.author.gravatar_hash+"?s=30.jpg", width="30", height="30")
+
+	div.date #{article.formatted_date}
+
+	div.name By #{article.author.name}

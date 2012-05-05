@@ -1,0 +1,15 @@
+extends layout
+
+block sidebar
+
+	include sidebar
+
+block content
+
+	ul.archive
+
+		each article in articles
+
+			li
+				span #{article.formatted_date}
+				a(href=article.path) #{article.title}

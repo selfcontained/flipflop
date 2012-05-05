@@ -1,0 +1,34 @@
+extends layout
+
+block title
+	#{title}
+
+block sidebar
+
+	include sidebar
+
+block content
+
+	each article in articles
+
+		article
+			h2
+				a(href=article.path) #{article.title}
+
+			include article-meta
+
+			div.content
+
+				!{article.content}
+
+			div.footer
+				a(href=article.path+'#disqus_thread')
+
+	script(type="text/javascript")
+		var disqus_shortname = 'selfcontained';
+		(function () {
+			var s = document.createElement('script'); s.async = true;
+			s.type = 'text/javascript';
+			s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+			(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+		}());

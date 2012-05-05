@@ -1,0 +1,16 @@
+-	var xml ='<?xml version="1.0" encoding="utf-8"?>'
+!{xml}
+rss(version="2.0")
+	channel
+		title #{title}
+		link(href="http://selfcontained.us")
+		author
+			name Brad Harris
+		for article in articles
+			item
+				title #{article.title}
+				link(href="http://selfcontained.us"+article.path)
+				pubDate #{article.date}
+				description
+					:cdata
+						!{article.content}

@@ -1,0 +1,24 @@
+div.about
+
+	img(src="/images/bradharris.gif", width="100", height="100", align="left")
+	p
+		|	My name is Brad Harris and I'm an engineer @ Yahoo!.
+		|	I love architecting software and developing simple and elegant solutions to complex problems. I
+		|	've worked for companies on large enterprise projects, as well as smaller projects, and fine satisfaction across the board.
+		|	I enjoy learning and applying new principles and patterns to my work.
+
+h3 recent articles
+
+ul
+	each article in recent_articles
+		li
+			a(href=article.path) #{article.title}
+			div.date #{article.formatted_date}
+
+h3 links
+
+ul
+	li
+		a(href="/archive/") archive
+	li
+		a(href="/feed/rss.xml") feed

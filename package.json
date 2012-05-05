@@ -1,0 +1,34 @@
+{
+	"name": "flipflop",
+	"description": "blogs should be easy, like putting on flipflops. GG",
+	"version": "0.0.1",
+	"author": "Brad Harris <bmharris@gmail.com>",
+	"keywords": [
+		"blog",
+		"markdown",
+		"static"
+	],
+	"main": "./lib/blog.js",
+	"bin" : {
+		"flipflop" : "./bin/flipflop"
+	},
+	"scripts" : {
+		"test" : "vows"
+	},
+	"engines": {
+		"node": ">= 0.4.1"
+	},
+	"dependencies" : {
+		"flatiron" : "0.1.16",
+		"highlight" : "0.2.1",
+		"jade" : "0.22.1",
+		"less" : "1.3.0",
+		"marked" : "0.2.4",
+		"moment" : "1.5.1",
+		"wrench" : "1.3.8"
+	},
+	"devDependencies" : {
+		"vows" : "0.6.2"
+	},
+	"license": "MIT"
+}
