@@ -4,11 +4,11 @@
 
 ## ezmode geek blogging, like wearing sandals
 
-It's a node.js library that can both serve a markdown file based blog, and also generate a static site from those files as well. GG.
+It's a node.js library that can both serve a markdown file based blog, and also generate a static site from those files as well. [GG][].
 
 +	**[markdown][]** - articles are stored in markdown formatted text files.
 +	**[jade][]** - the theme can be customized via jade templates & [less][]
-+	run it from a [node.js http server](#ff-server), or [generate a static site](#ff-static) that you can host pretty much anywhere and not worry about dependencies.
++	run it from a [node.js http server](#start-er-up), or [generate a static site](#static-sites-are-hawt) that you can host pretty much anywhere and not worry about dependencies.
 
 ---
 
@@ -28,16 +28,15 @@ It's a node.js library that can both serve a markdown file based blog, and also 
 
 This starts a cli app that will prompt for a few bits of info about your blog, and create a directory for it in the `process.cwd()`.
 
-<a name="ff-server" ></a>
 ##Start 'er up
 
 Make sure you're inside your blog's directory.
 
 ```
-> flipflop start
+> flipflop start <port>
 ```
++	port is optional, defaults to 8080
 
-<a name="ff-static"></a>
 ##Static sites are hawt
 
 Also, from inside your blog's directory.
@@ -116,7 +115,7 @@ Not much to describe here, just a markdown formatted file containing your articl
 
 I'm happy to accomodate pull requests and bug reports, so fork it and improve it or [let me know if you find any issues][issues].
 
-
+[GG]: http://www.urbandictionary.com/define.php?term=gg
 [markdown]: http://daringfireball.net/projects/markdown/
 [jade]: https://github.com/visionmedia/jade/
 [less]: http://lesscss.org/
