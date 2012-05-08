@@ -64,7 +64,8 @@ Generating a blog with `flipflop create` produces a `blog.json` file in your blo
 			"github": "bmharris"
 		}
 	},
-	"articles": "articles"
+	"articles": "articles",
+	"domain": "http://yourdomain.com"
 }
 ```
 ###Options
@@ -74,7 +75,8 @@ Many of these properties are used within the blog's template files.
 +	`description` the description of your blog
 +	`keywords` array of keywords describing your blog, used for the `<meta name="keyword"/>` tag
 +	`authors` key/value object containing article authors' information.  This is used to display information about an article's author on the associated article page.
-+	`articles` location of directory containing articles.  This defaults to a location relative to your blog's directory.
++	`articles` location of directory containing articles.  This defaults to a location relative to your blog's directory but can be absolute as well.
++	`domain` used for creating absolute paths for your blog's feed
 
 ##Write some articles
 
