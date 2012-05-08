@@ -62,6 +62,9 @@ vows.describe('flipflop')
 			'feed exists' : function() {
 				assert.isTrue(path.existsSync(path.join(this.lib.blogDir, 'public', 'feed', 'rss.xml')));
 			},
+			'404 page exists' : function() {
+				assert.isTrue(path.existsSync(path.join(this.lib.blogDir, 'public', '404.html')));
+			},
 			'images directory exists' : function() {
 				assert.isTrue(path.existsSync(path.join(this.lib.blogDir, 'public', 'images')));
 			},
@@ -135,6 +138,7 @@ vows.describe('flipflop')
 				'body is correct' : function(err, response, body) {
 					assert.isNull(err);
 					assert.notEqual(-1, body.indexOf('<channel><title>'+config.title+'</title>'));
+					assert.notEqual(-1, body.indexOf(config.domain));
 				}
 			}
 
