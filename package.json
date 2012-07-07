@@ -26,7 +26,7 @@
 	},
 	"dependencies" : {
 		"colors" : "0.6.0-1",
-		"express" : "2.5.9",
+		"express" : "3.0.x",
 		"flatiron" : "0.1.16",
 		"highlight" : "0.2.1",
 		"jade" : "0.22.1",
