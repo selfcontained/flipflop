@@ -124,4 +124,4 @@ I'm happy to accomodate pull requests and bug reports, so fork it and improve it
 [less]: http://lesscss.org/
 [marked]: https://github.com/chjj/marked
 [gfm]: http://github.github.com/github-flavored-markdown/
-[issues]: https://github.com/bmharris/flipflop/issues
+[issues]: https://github.com/selfcontained/flipflop/issues
