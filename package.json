@@ -38,11 +38,11 @@
     "utile": "0.0.10"
   },
   "devDependencies": {
-    "vows": "0.6.2",
-    "request": "2.9.202"
+    "vows": "0.7.x",
+    "request": "2.27.x"
   },
   "license": "MIT",
   "engine": {
-    "node": "0.8.x"
+    "node": ">=0.8.x"
   }
 }
