@@ -1,4 +1,5 @@
-var path = require('path'),
+var fs = require('fs'),
+	path = require('path'),
 	vows = require('vows'),
 	assert = require('assert'),
 	moment = require('moment'),
@@ -21,19 +22,19 @@ vows.describe('flipflop')
 			},
 
 			'blog directory exists' : function() {
-				assert.isTrue(path.existsSync(this.lib.blogDir));
+				assert.isTrue(fs.existsSync(this.lib.blogDir));
 			},
 			'articles directory exists' : function() {
-				assert.isTrue(path.existsSync(this.lib.articlesDir));
+				assert.isTrue(fs.existsSync(this.lib.articlesDir));
 			},
 			'theme directory exists' : function() {
-				assert.isTrue(path.existsSync(path.join(this.lib.blogDir, 'theme')));
+				assert.isTrue(fs.existsSync(path.join(this.lib.blogDir, 'theme')));
 			},
 			'blog.json config file exists' : function() {
-				assert.isTrue(path.existsSync(path.join(this.lib.blogDir, 'blog.json')));
+				assert.isTrue(fs.existsSync(path.join(this.lib.blogDir, 'blog.json')));
 			},
 			'sample article exists' : function() {
-				assert.isTrue(path.existsSync(path.join(this.lib.articlesDir, 'flipflop-ftw')));
+				assert.isTrue(fs.existsSync(path.join(this.lib.articlesDir, 'flipflop-ftw')));
 			},
 			'blog title is correct' : function() {
 				assert.equal(this.lib.config.title, require('./artifacts/blog.json').title);
@@ -54,22 +55,22 @@ vows.describe('flipflop')
 			},
 
 			'public directory exists' : function() {
-				assert.isTrue(path.existsSync(path.join(this.lib.blogDir, 'public')));
+				assert.isTrue(fs.existsSync(path.join(this.lib.blogDir, 'public')));
 			},
 			'archive exists' : function() {
-				assert.isTrue(path.existsSync(path.join(this.lib.blogDir, 'public', 'archive', 'index.html')));
+				assert.isTrue(fs.existsSync(path.join(this.lib.blogDir, 'public', 'archive', 'index.html')));
 			},
 			'feed exists' : function() {
-				assert.isTrue(path.existsSync(path.join(this.lib.blogDir, 'public', 'feed', 'rss.xml')));
+				assert.isTrue(fs.existsSync(path.join(this.lib.blogDir, 'public', 'feed', 'rss.xml')));
 			},
 			'404 page exists' : function() {
-				assert.isTrue(path.existsSync(path.join(this.lib.blogDir, 'public', '404.html')));
+				assert.isTrue(fs.existsSync(path.join(this.lib.blogDir, 'public', '404.html')));
 			},
 			'images directory exists' : function() {
-				assert.isTrue(path.existsSync(path.join(this.lib.blogDir, 'public', 'images')));
+				assert.isTrue(fs.existsSync(path.join(this.lib.blogDir, 'public', 'images')));
 			},
 			'tag directory exists' : function() {
-				assert.isTrue(path.existsSync(path.join(this.lib.blogDir, 'public', 'tag')));
+				assert.isTrue(fs.existsSync(path.join(this.lib.blogDir, 'public', 'tag')));
 			},
 			'sample article exists' : function() {
 				var article = path.join(
@@ -79,7 +80,7 @@ vows.describe('flipflop')
 					'flipflop-ftw',
 					'index.html'
 				);
-				assert.isTrue(path.existsSync(article));
+				assert.isTrue(fs.existsSync(article));
 			}
 		}
 	})

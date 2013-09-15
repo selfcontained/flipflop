@@ -65,7 +65,15 @@ Generating a blog with `flipflop create` produces a `blog.json` file in your blo
 		}
 	},
 	"articles": "articles",
-	"domain": "http://yourdomain.com"
+	"domain": "http://yourdomain.com",
+	"routes": {
+		"archive": "/archive",
+		"article": "/:year/:month/:day/:slug",
+		"error": "/404.html",
+		"homepage": "/",
+		"feed": "/feed/rss.xml",
+		"tag": "/tag/:tag"
+	}
 }
 ```
 ###Options
@@ -77,6 +85,40 @@ Many of these properties are used within the blog's template files.
 +	`authors` key/value object containing article authors' information.  This is used to display information about an article's author on the associated article page.
 +	`articles` location of directory containing articles.  This defaults to a location relative to your blog's directory but can be absolute as well.
 +	`domain` used for creating absolute paths for your blog's feed
++	`routes` allow a user to configure the urls
+
+## Configuring Routes / Urls
+
+You can configure urls for yuor blog via the `routes` property in the `blog.json` config file.  For example, if you wanted to prefix your blog with **/blog/**, you can do the following:
+
+```javascript
+"routes": {
+	"archive": "/blog/archive",
+	"article": "/blog/:year/:month/:day/:slug",
+	"error": "/blog/404.html",
+	"homepage": "/blog",
+	"feed": "/blog/feed/rss.xml",
+	"tag": "/blog/tag/:tag"
+}
+```
+
+If **.html** extensions are what you live for, you could change your **article** route to look like:
+
+```javascript
+"article": "/:year/:month/:day/:slug.html"
+```
+
+There are a few special things to note with routes:
+
++ The **article** route requires a `:slug` param.  Available params are:
+	+ `:year`
+	+ `:month`
+	+ `:day`
+	+ `:slug` (required)
++ The **tag** route requires a `:tag` param.  Available params are:
+	+ `:tag` (required)
+
+---
 
 ##Write some articles
 
@@ -117,6 +159,31 @@ Not much to describe here, just a markdown formatted file containing your articl
 ##Contributing
 
 I'm happy to accomodate pull requests and bug reports, so fork it and improve it or [let me know if you find any issues][issues].
+
+## License
+
+(The MIT License)
+
+Copyright (c) 2013 Brad Harris
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+'Software'), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 [GG]: http://www.urbandictionary.com/define.php?term=gg
 [markdown]: http://daringfireball.net/projects/markdown/
