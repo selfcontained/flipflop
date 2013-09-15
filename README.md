@@ -1,4 +1,4 @@
-[![Build Status](https://secure.travis-ci.org/bmharris/flipflop.png?branch=master)](http://travis-ci.org/bmharris/flipflop)
+[![Build Status](https://secure.travis-ci.org/selfcontained/flipflop.png?branch=master)](http://travis-ci.org/selfcontained/flipflop)
 
 #flipflop
 
