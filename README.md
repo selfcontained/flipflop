@@ -65,7 +65,15 @@ Generating a blog with `flipflop create` produces a `blog.json` file in your blo
 		}
 	},
 	"articles": "articles",
-	"domain": "http://yourdomain.com"
+	"domain": "http://yourdomain.com",
+	"routes": {
+		"archive": "/archive",
+		"article": "/:year/:month/:day/:slug",
+		"error": "/404.html",
+		"homepage": "/",
+		"feed": "/feed/rss.xml",
+		"tag": "/tag/:tag"
+	}
 }
 ```
 ###Options
@@ -77,6 +85,40 @@ Many of these properties are used within the blog's template files.
 +	`authors` key/value object containing article authors' information.  This is used to display information about an article's author on the associated article page.
 +	`articles` location of directory containing articles.  This defaults to a location relative to your blog's directory but can be absolute as well.
 +	`domain` used for creating absolute paths for your blog's feed
++	`routes` allow a user to configure the urls
+
+## Configuring Routes / Urls
+
+You can configure urls for yuor blog via the `routes` property in the `blog.json` config file.  For example, if you wanted to prefix your blog with **/blog/**, you can do the following:
+
+```javascript
+"routes": {
+	"archive": "/blog/archive",
+	"article": "/blog/:year/:month/:day/:slug",
+	"error": "/blog/404.html",
+	"homepage": "/blog",
+	"feed": "/blog/feed/rss.xml",
+	"tag": "/blog/tag/:tag"
+}
+```
+
+If **.html** extensions are what you live for, you could change your **article** route to look like:
+
+```javascript
+"article": "/:year/:month/:day/:slug.html"
+```
+
+There are a few special things to note with routes:
+
++ The **article** route requires a `:slug` param.  Available params are:
+	+ `:year`
+	+ `:month`
+	+ `:day`
+	+ `:slug` (required)
++ The **tag** route requires a `:tag` param.  Available params are:
+	+ `:tag` (required)
+
+---
 
 ##Write some articles
 
