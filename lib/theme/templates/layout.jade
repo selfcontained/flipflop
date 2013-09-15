@@ -7,7 +7,7 @@ html(lang="en")
 		meta(name="viewport", content="width=device-width,initial-scale=1")
 
 		link(href="/css/blog.css", rel="stylesheet")
-		link(rel="alternate", type="application/rss+xml", title=blogTitle+" » rss", href="/feed/rss.xml")
+		link(rel="alternate", type="application/rss+xml", title=blog.title+" » rss", href=blog.routes.feed)
 
 	body
 
@@ -15,8 +15,8 @@ html(lang="en")
 
 			header
 				h1
-					a(href="/") #{blogTitle}
-					small  [#{blogDescription}]
+					a(href="/") #{blog.title}
+					small  [#{blog.description}]
 
 			div#content-container
 
