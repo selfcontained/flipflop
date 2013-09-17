@@ -14,7 +14,7 @@
     "flipflop": "./bin/flipflop"
   },
   "scripts": {
-    "test": "vows"
+    "test": "jshint . && vows"
   },
   "repository": {
     "type": "git",
@@ -38,6 +38,7 @@
     "utile": "0.0.10"
   },
   "devDependencies": {
+    "jshint":"~2.1.10",
     "vows": "0.7.x",
     "request": "2.27.x"
   },
