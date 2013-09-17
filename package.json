@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "http://github.com/bmharris/flipflop.git"
+    "url": "http://github.com/selfcontained/flipflop.git"
   },
   "directories": {
     "lib": "./lib",
