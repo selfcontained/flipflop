@@ -1,0 +1,16 @@
+//
+// If you add any options in here, please add their description as well
+//
+{
+	"asi"		: false,	// if automatic semicolon insertion should be tolerated
+	"boss"		: true,		// if advanced usage of assignments should be allowed
+	"node"		: true,		// This option defines globals available when your code is running inside of the Node runtime environment.
+	"expr"      : true,		// if ExpressionStatement should be allowed as Programs
+	"evil"		: true,		// if eval statements are allowed
+	"jquery"	: true,		// if jQuery globals should be predefined
+	"laxbreak"	: true,		// if line breaks should not be checked
+	"laxcomma"	: true,		// if line breaks should not be checked around commas
+	"loopfunc"	: true,		// if functions should be allowed to be defined within loops
+	"smarttabs"	: true,		// if smarttabs should be tolerated (http://www.emacswiki.org/emacs/SmartTabs)
+	"validthis"	: true		// if 'this' inside a non-constructor function is valid.  This is a function scoped option only.
+}
